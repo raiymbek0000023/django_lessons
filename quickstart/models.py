@@ -13,10 +13,9 @@ class Category(Model):
     title=models.CharField(max_length=255)
     def __str__(self) -> str:
         return self.title
-
     class Meta:
         verbose_name_plural= 'Categories'
-
+                            
 class Product(Model):
     title=models.CharField(max_length=255)
     price=models.IntegerField()

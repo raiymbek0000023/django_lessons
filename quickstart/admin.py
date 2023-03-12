@@ -9,6 +9,8 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display_links=('id', 'title')
     search_fields=('title', )
     list_filter=('title', )
+    def __str__(self) -> str:
+        return self.Type
 
 @admin.register(Product)
 class ProductsAdmin(admin.ModelAdmin):
@@ -16,5 +18,8 @@ class ProductsAdmin(admin.ModelAdmin):
     list_display_links=('id', 'title')
     search_fields=('title', )
     list_filter = ('title', )
+    def __str__(self) -> str:
+        return self.Type
+    
 
     
